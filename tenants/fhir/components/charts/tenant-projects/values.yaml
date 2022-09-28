@@ -1,0 +1,17 @@
+fhir-tenant:
+  fullnameOverride: fhir
+
+  datascienceNamespace:
+    create: false
+  gitopsNamespace:
+    create: false
+  prodNamespace:
+    create: false
+  testNamespace:
+    create: false
+  devNamespace:
+    nameOverride: fhir
+
+  adminGroup:
+    create: false
+    nameOverride: redhat

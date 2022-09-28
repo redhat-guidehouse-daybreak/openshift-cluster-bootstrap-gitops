@@ -1,0 +1,19 @@
+kafka-tenant:
+  fullnameOverride: kafka
+
+  datascienceNamespace:
+    create: false
+  gitopsNamespace:
+    create: false
+  pipelinesNamespace:
+    create: false
+  prodNamespace:
+    create: false
+  testNamespace:
+    create: false
+  devNamespace:
+    nameOverride: kafka
+
+  adminGroup:
+    create: false
+    nameOverride: redhat

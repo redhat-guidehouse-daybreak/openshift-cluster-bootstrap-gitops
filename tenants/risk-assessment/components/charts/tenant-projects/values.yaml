@@ -1,0 +1,19 @@
+risk-assessment-tenant:
+  fullnameOverride: risk-assessment
+
+  datascienceNamespace:
+    create: false
+  gitopsNamespace:
+    create: false
+  pipelinesNamespace:
+    create: false
+  prodNamespace:
+    create: false
+  testNamespace:
+    create: false
+  devNamespace:
+    nameOverride: risk-assessment
+
+  adminGroup:
+    create: false
+    nameOverride: redhat
