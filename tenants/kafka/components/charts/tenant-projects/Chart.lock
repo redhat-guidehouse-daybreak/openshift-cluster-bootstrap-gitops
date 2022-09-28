@@ -1,0 +1,6 @@
+dependencies:
+- name: ml-gitops-tenant
+  repository: https://rh-intelligent-application-practice.github.io/helm-charts/
+  version: 0.2.0
+digest: sha256:90ae933a81d2b769fc2b13905dd5f83a4ea5e972d8706e89747c494e3f197a2e
+generated: "2022-09-28T13:56:14.848511991-05:00"
