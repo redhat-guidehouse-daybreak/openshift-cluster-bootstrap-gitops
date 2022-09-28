@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - cluster-config-app-of-apps.yaml
   - cluster-operators-applicationset.yaml
+  - rbac-applicationset.yaml

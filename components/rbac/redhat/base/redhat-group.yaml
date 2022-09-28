@@ -1,0 +1,14 @@
+kind: Group
+apiVersion: user.openshift.io/v1
+metadata:
+  name: guidehouse
+users:
+  - arunhari82
+  - becush
+  - bit4man
+  - dvanbalen
+  - gtinsley
+  - noahsa
+  - pacificera
+  - rdwj
+  - strangiato
