@@ -34,5 +34,10 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
+        name: redhat-camel-k-operator
+        path: components/operators/redhat-camel-k-operator/operator/overlays/latest
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
         name: web-terminal-operator
         path: components/operators/web-terminal-operator/operator/overlays/fast
