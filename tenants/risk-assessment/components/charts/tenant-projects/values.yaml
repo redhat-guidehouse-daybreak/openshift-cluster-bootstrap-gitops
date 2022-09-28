@@ -6,7 +6,7 @@ risk-assessment-tenant:
   gitopsNamespace:
     create: false
   pipelinesNamespace:
-    create: false
+    create: true
   prodNamespace:
     create: false
   testNamespace:
