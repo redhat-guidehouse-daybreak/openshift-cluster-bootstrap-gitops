@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: redhat-ods-operator
 spec:
-  channel: patch-me-see-overlays-dir
+  channel: stable
   installPlanApproval: Automatic
   name: rhods-operator
   source: redhat-operators
