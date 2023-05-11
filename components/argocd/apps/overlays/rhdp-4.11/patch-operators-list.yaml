@@ -19,13 +19,18 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
-        name: opendatahub-operator
-        path: components/operators/opendatahub/operator/overlays/stable
-    - cluster: local
-      url: https://kubernetes.default.svc
-      values:
-        name: openshift-data-foundation-operator
-        path: components/operators/openshift-data-foundation/aggregate/overlays/aws-node-labeler-4.11
+        name: rhods-operator
+        path: components/operators/redhat-ods-operator/operator/overlays/stable
+ #   - cluster: local
+ #     url: https://kubernetes.default.svc
+ #     values:
+ #       name: opendatahub-operator
+ #       path: components/operators/opendatahub/operator/overlays/stable
+ #   - cluster: local
+ #     url: https://kubernetes.default.svc
+ #     values:
+ #       name: openshift-data-foundation-operator
+ #       path: components/operators/openshift-data-foundation/aggregate/overlays/aws-node-labeler-4.11
     - cluster: local
       url: https://kubernetes.default.svc
       values:
