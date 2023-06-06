@@ -4,6 +4,6 @@ venv/
 dictionary.dic
 tmp/
 Chart.lock
-
+**/charts/*.tgz
 # Sealed secret key
 bootstrap/base/sealed-secrets-secret.yaml
