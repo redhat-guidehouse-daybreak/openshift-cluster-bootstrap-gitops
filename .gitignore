@@ -3,6 +3,7 @@ manifest.yaml
 venv/
 dictionary.dic
 tmp/
+Chart.lock
 
 # Sealed secret key
 bootstrap/base/sealed-secrets-secret.yaml
