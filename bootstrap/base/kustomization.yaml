@@ -4,3 +4,5 @@ kind: Kustomization
 resources:
   - ../../components/operators/sealed-secrets-operator/overlays/default
   - sealed-secrets-secret.yaml
+  - custom-domain-secret.yaml
+  - custom-domain.yaml
