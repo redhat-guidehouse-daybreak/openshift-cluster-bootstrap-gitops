@@ -145,7 +145,7 @@ wait_for_openshift_gitops(){
   GITOPS_RESOURCES=(
     deployment/cluster:condition=Available \
     deployment/kam:condition=Available \
-    statefulset/openshift-gitops-application-controller:jsonpath='{.status.readyReplicas}'=2 \
+    statefulset/openshift-gitops-application-controller:jsonpath='{.status.readyReplicas}'=1 \
     deployment/openshift-gitops-applicationset-controller:condition=Available \
     deployment/openshift-gitops-redis:condition=Available \
     deployment/openshift-gitops-repo-server:condition=Available \
