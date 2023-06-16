@@ -1,0 +1,11 @@
+apiVersion: managed.openshift.io/v1alpha1
+kind: CustomDomain
+metadata:
+  name: guidehouse
+spec:
+  domain: daybreak.cs.guidehouse.com 
+  scope: External
+  loadBalancerType: Classic 
+  certificate:
+    name: guidehouse-tls 
+    namespace: openshift
