@@ -5,3 +5,4 @@ namespace: openshift-operators
 
 resources:
   - 3scale-subscription.yaml
+  - api-manager.yaml

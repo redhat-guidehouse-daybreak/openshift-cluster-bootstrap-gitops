@@ -8,4 +8,4 @@ spec:
   loadBalancerType: Classic 
   certificate:
     name: guidehouse-tls 
-    namespace: openshift
+    namespace: openshift-custom-domains-operator
