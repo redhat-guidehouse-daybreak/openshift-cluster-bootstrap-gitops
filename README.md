@@ -94,12 +94,6 @@ Use the OpenShift Login option and sign in with your OpenShift credentials.
 
 The cluster may take 10-15 minutes to finish installing and updating.
 
-## Custom Domain
-The wildcard custom domain for guidehouse is *.daybreak.cs.guidehouse.com. You will need to contact Guidehouse IT to create a wildcard certificate for the domain. Then go to cluster management console to update tls-key and tls-crt in guidehouse-tls secret. tls-key is the provided private key, tls-crt is the public certificate with full chain.
-
-After secret is created, you need to recreate the custom domain, go to bootstrap/base folder, run -
-`oc delete -f custom-domain.yaml` and then run `oc apply -f custom-domain.yaml`
-
 ## Project Structure Overview
 
 This project structure is based on the opinionated configuration found [here](https://github.com/gnunn-gitops/standards/blob/master/folders.md).  For a more detailed breakdown of the intention of this folder structure, feel free to read more there.
