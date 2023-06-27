@@ -6,4 +6,4 @@ commonAnnotations:
 
 resources:
   - ../../operator/overlays/stable
-  - ../../instance/overlays/default
+#  - ../../instance/overlays/default
