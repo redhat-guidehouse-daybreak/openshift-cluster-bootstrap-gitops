@@ -1,0 +1,9 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+  name: rh-sso
+  namespace: rh-sso
+spec:
+  targetNamespaces:
+    - rh-sso
