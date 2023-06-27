@@ -6,5 +6,8 @@ namespace: openshift-logging
 
 resources:
   - namespace.yaml
+  - enable-console-plugin-job.yaml
+  - enable-console-plugin-rbac.yaml
+  - enable-console-plugin-sa.yaml
   - operator-group.yaml
   - subscription.yaml
