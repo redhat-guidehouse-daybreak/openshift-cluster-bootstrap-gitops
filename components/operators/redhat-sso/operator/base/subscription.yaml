@@ -4,8 +4,7 @@ metadata:
   name: rhsso-operator
   namespace: rh-sso
 spec:
-  channel: alpha
-  installPlanApproval: Manual
+  channel: stable
   name: rhsso-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
