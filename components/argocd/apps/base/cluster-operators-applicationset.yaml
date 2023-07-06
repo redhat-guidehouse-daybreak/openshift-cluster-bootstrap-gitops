@@ -29,6 +29,8 @@ spec:
         #     duration: 5s
         #     factor: 2
         #     maxDuration: 10m
+        syncOptions:
+          - CreateNamespace=true
       source:
         repoURL: patch-me-see-clusters-overlays
         targetRevision: patch-me-see-clusters-overlays
