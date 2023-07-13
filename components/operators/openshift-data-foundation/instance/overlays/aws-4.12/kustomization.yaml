@@ -8,5 +8,5 @@ resources:
   - ocsinitialization.yaml
   - storagecluster.yaml
 
-patches:
+patchesStrategicMerge:
   - gp3-default-patch.yaml
