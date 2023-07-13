@@ -7,6 +7,3 @@ resources:
 - ../../base
 - ocsinitialization.yaml
 - storagecluster.yaml
-
-patchesStrategicMerge:
-- gp3-default-patch.yaml
