@@ -9,5 +9,4 @@ resources:
   - storagecluster.yaml
 
 patches:
-  - target:
-    path: gp3-default-patch.yaml
+  - gp3-default-patch.yaml
