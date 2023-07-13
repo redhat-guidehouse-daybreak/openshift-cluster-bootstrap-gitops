@@ -1,6 +1,5 @@
 apiVersion: ocs.openshift.io/v1
 kind: StorageClass
-apiVersion: storage.k8s.io/v1
 metadata:
   name: gp3
   annotations:
