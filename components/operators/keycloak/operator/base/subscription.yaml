@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    operators.coreos.com/keycloak-operator.keycloak: ''
+  name: keycloak-operator
+  namespace: keycloak
+spec:
+  channel: fast
+  installPlanApproval: Automatic
+  name: keycloak-operator
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: keycloak-operator.v22.0.0
