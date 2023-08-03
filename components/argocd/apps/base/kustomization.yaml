@@ -11,3 +11,4 @@ resources:
   - cluster-operators-applicationset.yaml
   - rbac-applicationset.yaml
   - psql-application.yaml
+  - keycloak-application.yaml
