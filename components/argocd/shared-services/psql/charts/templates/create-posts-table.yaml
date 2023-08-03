@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: create-posts-table
+data:
+  create-posts-table.sql: |-
+    CREATE TABLE socialPosts (
+      post_id SERIAL PRIMARY KEY,
+      resourceId VARCHAR(50) NOT NULL,
+      status VARCHAR(20) NOT NULL,
+      comments JSONB NOT NULL,
+      created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+      username VARCHAR(50) NOT NULL
+    );

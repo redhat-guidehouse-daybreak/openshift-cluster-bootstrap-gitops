@@ -1,0 +1,27 @@
+postgres:
+  enabled: true
+  initdbScriptsConfigMap: create-posts-table
+  auth:
+    username: admin
+    password: admin#123
+    database: posts
+  primary:
+    podSecurityContext:
+      enabled: false
+      fsGroup: ""
+    containerSecurityContext:
+      enabled: false
+      runAsUser: "auto"
+
+  readReplicas:
+    podSecurityContext:
+      enabled: false
+      fsGroup: ""
+    containerSecurityContext:
+      enabled: false
+      runAsUser: "auto"
+
+  volumePermissions:
+    enabled: false
+    securityContext:
+      runAsUser: "auto"
