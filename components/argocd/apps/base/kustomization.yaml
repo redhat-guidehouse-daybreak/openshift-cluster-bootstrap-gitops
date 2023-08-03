@@ -12,3 +12,4 @@ resources:
   - rbac-applicationset.yaml
   - psql-application.yaml
   - keycloak-application.yaml
+  - 3scale-application.yaml

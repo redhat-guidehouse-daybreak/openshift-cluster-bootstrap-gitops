@@ -54,6 +54,10 @@ Before beginning, make sure you are logged into your cluster using `oc`.
 
 Next, clone this repository to your local environment.
 
+## Custom Domain
+The default custom domain for the cluster is `apps.<cluster-name>.....openshiftapps.com`. You can get this by executing `oc describe ingresscontroller default -n openshift-ingress-operator`
+Before you run bootstrap for daybreak-tenant-gtops, you must update `components/argocd/shared-services/3scale/overlays/default/patch-domain.yaml` with the correct domain name
+
 ### Sealed Secrets Bootstrap
 
 This repository deploys sealed-secrets and requires a sealed secret master key to bootstrap.  If you plan to reuse sealed-secrets created using another key you must obtain that key from the person that created the sealed-secrets.
