@@ -14,8 +14,6 @@ spec:
       password:
         type: ASCII
       name: admin
-  standby:
-    enabled: true
   proxy:
     pgBouncer:
       port: 5432
