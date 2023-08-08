@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: psql
+  name: curnchy-psql
 spec:
   destination:
-    namespace: psql
+    namespace: postgres
     server: https://kubernetes.default.svc
   project: shared-services
   source:
-    path: components/argocd/shared-services/psql/charts
+    path: components/argocd/shared-services/crunchy/overlays/default
     repoURL: https://github.com/redhat-guidehouse-daybreak/openshif-cluster-bootstrap-gitops.git
     targetRevision: main
   syncPolicy:

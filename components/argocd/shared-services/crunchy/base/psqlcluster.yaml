@@ -1,0 +1,46 @@
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PostgresCluster
+metadata:
+  name: postgres
+  namespace: postgres
+spec:
+  port: 5432
+  databaseInitSQL:
+    name: create-posts-table
+    key: ' create-posts-table.sql'
+  users:
+    - databases:
+        - post
+      password:
+        type: ASCII
+      name: admin
+  standby:
+    enabled: true
+  proxy:
+    pgBouncer:
+      port: 5432
+      service:
+        type: ClusterIP
+      replicas: 1
+  backups:
+    pgbackrest:
+      repos:
+        - volume:
+            volumeClaimSpec:
+              accessModes:
+                - ReadWriteOnce
+              resources:
+                requests:
+                  storage: 1Gi
+          name: repo1
+  service:
+    type: ClusterIP
+  instances:
+    - dataVolumeClaimSpec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+      replicas: 1
+  postgresVersion: 15
