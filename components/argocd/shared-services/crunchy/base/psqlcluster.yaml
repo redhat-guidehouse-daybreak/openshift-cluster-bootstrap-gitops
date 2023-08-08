@@ -43,6 +43,7 @@ spec:
       replicas: 1
   userInterface:
     pgAdmin:
+      image: registry.developers.crunchydata.com/crunchydata/crunchy-pgadmin4:ubi8-4.30-13
       dataVolumeClaimSpec:
         accessModes:
           - ReadWriteOnce
