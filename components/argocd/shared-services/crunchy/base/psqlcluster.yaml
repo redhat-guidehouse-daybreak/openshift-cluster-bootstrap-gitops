@@ -49,6 +49,7 @@ spec:
     type: ClusterIP
   userInterface:
     pgAdmin:
+      image: registry.developers.crunchydata.com/crunchydata/crunchy-pgadmin4:ubi8-4.30-16
       dataVolumeClaimSpec:
         accessModes:
           - ReadWriteOnce
