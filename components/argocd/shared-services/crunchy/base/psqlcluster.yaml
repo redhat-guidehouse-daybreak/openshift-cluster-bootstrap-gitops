@@ -4,6 +4,9 @@ metadata:
   name: post
   namespace: postgres
 spec:
+  databaseInitSQL:
+    key: create-posts-table.sql
+    name: create-posts-table
   port: 5432
   users:
     - databases:
