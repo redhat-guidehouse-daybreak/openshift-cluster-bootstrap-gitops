@@ -31,22 +31,7 @@ spec:
             storage: 1Gi
       name: ''
       replicas: 1
-  patroni:
-    leaderLeaseDurationSeconds: 30
-    port: 8008
-    switchover:
-      enabled: true
-      type: Switchover
-    syncPeriodSeconds: 10
   postgresVersion: 15
-  proxy:
-    pgBouncer:
-      port: 5432
-      replicas: 1
-      service:
-        type: ClusterIP
-  service:
-    type: ClusterIP
   userInterface:
     pgAdmin:
       image: registry.developers.crunchydata.com/crunchydata/crunchy-pgadmin4:ubi8-4.30-16
@@ -54,5 +39,3 @@ spec:
         accessModes:
           - ReadWriteOnce
       replicas: 1
-      service:
-        type: ClusterIP
