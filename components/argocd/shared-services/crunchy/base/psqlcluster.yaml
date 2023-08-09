@@ -44,4 +44,4 @@ spec:
       service:
         nodePort: 5050
         type: ClusterIP
-  postgresVersion: 15
+  postgresVersion: 14
