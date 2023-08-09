@@ -5,15 +5,6 @@ metadata:
   namespace: postgres
 spec:
   port: 5432
-  databaseInitSQL:
-    name: create-posts-table
-    key: ' create-posts-table.sql'
-  users:
-    - databases:
-        - post
-      password:
-        type: AlphaNumeric
-      name: admin
   backups:
     pgbackrest:
       repos:
