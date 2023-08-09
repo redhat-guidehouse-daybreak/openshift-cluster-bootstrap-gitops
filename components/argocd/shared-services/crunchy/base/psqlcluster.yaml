@@ -17,14 +17,14 @@ spec:
   backups:
     pgbackrest:
       repos:
-        - volume:
+        - name: repo1
+          volume:
             volumeClaimSpec:
               accessModes:
                 - ReadWriteOnce
               resources:
                 requests:
                   storage: 1Gi
-          name: repo1
   instances:
     - dataVolumeClaimSpec:
         accessModes:
@@ -32,20 +32,8 @@ spec:
         resources:
           requests:
             storage: 1Gi
+      name: ''
       replicas: 1
-  userInterface:
-    pgAdmin:
-      dataVolumeClaimSpec:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 1Gi
-      replicas: 1
-      service:
-        nodePort: 5050
-        type: ClusterIP
-  postgresVersion: 15
   patroni:
     leaderLeaseDurationSeconds: 30
     port: 8008
@@ -53,3 +41,20 @@ spec:
       enabled: true
       type: Switchover
     syncPeriodSeconds: 10
+  postgresVersion: 15
+  proxy:
+    pgBouncer:
+      port: 5432
+      replicas: 1
+      service:
+        type: ClusterIP
+  service:
+    type: ClusterIP
+  userInterface:
+    pgAdmin:
+      dataVolumeClaimSpec:
+        accessModes:
+          - ReadWriteOnce
+      replicas: 1
+      service:
+        type: ClusterIP
