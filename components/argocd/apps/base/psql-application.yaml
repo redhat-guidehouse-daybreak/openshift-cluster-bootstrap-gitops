@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: curnchy-psql
+  name: crunchy-psql
 spec:
   destination:
     namespace: postgres
