@@ -14,12 +14,6 @@ spec:
       password:
         type: AlphaNumeric
       name: admin
-  proxy:
-    pgBouncer:
-      port: 5432
-      service:
-        type: ClusterIP
-      replicas: 1
   backups:
     pgbackrest:
       repos:
@@ -31,8 +25,6 @@ spec:
                 requests:
                   storage: 1Gi
           name: repo1
-  service:
-    type: ClusterIP
   instances:
     - dataVolumeClaimSpec:
         accessModes:
