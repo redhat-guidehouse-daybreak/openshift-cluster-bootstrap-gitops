@@ -41,6 +41,7 @@ spec:
         resources:
           requests:
             storage: 1Gi
+      replicas: 1
       service:
         nodePort: 5050
         type: ClusterIP
