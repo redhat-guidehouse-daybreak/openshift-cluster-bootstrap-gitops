@@ -5,6 +5,12 @@ metadata:
   namespace: postgres
 spec:
   port: 5432
+  users:
+    - databases:
+        - post
+      password:
+        type: AlphaNumeric
+      name: admin
   backups:
     pgbackrest:
       repos:
