@@ -11,27 +11,26 @@ spec:
       password:
         type: AlphaNumeric
       name: admin
-  backups:
-    pgbackrest:
-      repos:
-        - name: repo1
-          volume:
-            volumeClaimSpec:
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 1Gi
+  postgresVersion: 14
   instances:
-    - dataVolumeClaimSpec:
+    - name: instance1
+      dataVolumeClaimSpec:
         accessModes:
-          - ReadWriteOnce
+        - "ReadWriteOnce"
         resources:
           requests:
             storage: 1Gi
-      name: ''
-      replicas: 1
-  postgresVersion: 15
+  backups:
+    pgbackrest:
+      repos:
+      - name: repo1
+        volume:
+          volumeClaimSpec:
+            accessModes:
+            - "ReadWriteOnce"
+            resources:
+              requests:
+                storage: 1Gi
   userInterface:
     pgAdmin:
       dataVolumeClaimSpec:
@@ -39,12 +38,5 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 5Gi
+            storage: 1Gi
       replicas: 1
-      resources:
-        limits:
-          cpu: 1000m
-          memory: 128Mi
-        requests:
-          cpu: 10m
-          memory: 128Mi
