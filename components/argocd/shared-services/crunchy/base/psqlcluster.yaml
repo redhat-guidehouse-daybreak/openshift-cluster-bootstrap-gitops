@@ -46,3 +46,10 @@ spec:
         nodePort: 5050
         type: ClusterIP
   postgresVersion: 15
+  patroni:
+    leaderLeaseDurationSeconds: 30
+    port: 8008
+    switchover:
+      enabled: true
+      type: Switchover
+    syncPeriodSeconds: 10
