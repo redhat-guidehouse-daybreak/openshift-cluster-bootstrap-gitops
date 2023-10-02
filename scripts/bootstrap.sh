@@ -6,14 +6,14 @@ source "$(dirname "$0")/functions.sh"
 
 LANG=C
 TIMEOUT_SECONDS=45
-ARGO_NS="openshift-gitops"
+ARGO_NS="openshift-operators"
 GITOPS_OVERLAY=components/operators/openshift-gitops/operator/overlays/latest/
 
 install_gitops(){
   echo ""
   echo "Installing GitOps Operator."
 
-  kustomize build ${GITOPS_OVERLAY} | oc apply -f -
+  # kustomize build ${GITOPS_OVERLAY} | oc apply -f -
 
   # oc wait docs:
   # https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/developer-cli-commands.html#oc-wait
@@ -60,10 +60,10 @@ bootstrap_cluster(){
 
   wait_for_openshift_gitops
 
-  echo
-  echo "Restart the application-controller to start the sync"
+  #echo
+  #echo "Restart the application-controller to start the sync"
   # Restart is necessary to resolve a bug where apps don't start syncing after they are applied
-  oc delete pods -l app.kubernetes.io/name=openshift-gitops-application-controller -n ${ARGO_NS}
+  #oc delete pods -l app.kubernetes.io/name=openshift-gitops-application-controller -n ${ARGO_NS}
 
   wait_for_openshift_gitops
 

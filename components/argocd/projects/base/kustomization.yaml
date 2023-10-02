@@ -4,4 +4,3 @@ kind: Kustomization
 resources:
   - cluster-config-project.yaml
   - tenant-config-project.yaml
-  - shared-services-project.yaml
