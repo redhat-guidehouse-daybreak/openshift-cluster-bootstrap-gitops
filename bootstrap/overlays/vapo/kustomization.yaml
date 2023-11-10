@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - ../../base
   - ./argo.yaml
-  - ../components/argocd/projects/overlays/default
-  - ../tenants/fhir/components/argocd/applications/overlays/default
-  - ../tenants/kafka/components/argocd/applications/overlays/default
-  - ../tenants/risk-assessment/components/argocd/applications/overlays/default
+  - ../../../components/argocd/projects/overlays/default
+  - ../../../tenants/fhir/components/argocd/applications/overlays/default
+  - ../../../tenants/kafka/components/argocd/applications/overlays/default
+  - ../../../tenants/risk-assessment/components/argocd/applications/overlays/default
