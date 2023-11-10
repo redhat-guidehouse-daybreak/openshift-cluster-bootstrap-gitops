@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - ../../../components/operators/sealed-secrets-operator/overlays/vapo
   - ./sealed-secrets-secret.yaml  
-  - ./argo.yaml
+  - ../../../components/operators/openshift-gitops/instance/overlays/vapo
   - ../../../components/argocd/projects/overlays/default
   - ../../../tenants/fhir/components/argocd/applications/overlays/default
   - ../../../tenants/kafka/components/argocd/applications/overlays/default
