@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - ../argo.yaml
+  - ./argo.yaml
   - ../components/argocd/projects/overlays/default
   - ../tenants/fhir/components/argocd/applications/overlays/default
   - ../tenants/kafka/components/argocd/applications/overlays/default
